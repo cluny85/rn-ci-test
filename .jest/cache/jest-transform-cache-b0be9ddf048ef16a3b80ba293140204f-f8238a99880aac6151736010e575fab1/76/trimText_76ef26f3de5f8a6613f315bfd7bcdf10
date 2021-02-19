@@ -1,0 +1,15 @@
+d89a3ede6f5b6fdde8d79554eef27343
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.trimText = void 0;
+const DEFAULT_MAX_LENGTH = 70;
+/**
+ * Function to trim a string to a specific length
+ * string - input string
+ * length - the length to trim the string to
+ */
+function trimText(string, length = DEFAULT_MAX_LENGTH) {
+    return `${string.substring(0, length)}...`;
+}
+exports.trimText = trimText;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL1VzZXJzL29zY2FyL0RvY3VtZW50cy9ib2Jpby9ybi9zcmMvdXRpbHMvdHJpbVRleHQvdHJpbVRleHQudHMiLCJtYXBwaW5ncyI6Ijs7O0FBQUEsTUFBTSxrQkFBa0IsR0FBRyxFQUFFLENBQUM7QUFFOUI7Ozs7R0FJRztBQUNILFNBQWdCLFFBQVEsQ0FBQyxNQUFjLEVBQUUsU0FBaUIsa0JBQWtCO0lBQzFFLE9BQU8sR0FBRyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUMsRUFBRSxNQUFNLENBQUMsS0FBSyxDQUFDO0FBQzdDLENBQUM7QUFGRCw0QkFFQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvVXNlcnMvb3NjYXIvRG9jdW1lbnRzL2JvYmlvL3JuL3NyYy91dGlscy90cmltVGV4dC90cmltVGV4dC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBERUZBVUxUX01BWF9MRU5HVEggPSA3MDtcblxuLyoqXG4gKiBGdW5jdGlvbiB0byB0cmltIGEgc3RyaW5nIHRvIGEgc3BlY2lmaWMgbGVuZ3RoXG4gKiBzdHJpbmcgLSBpbnB1dCBzdHJpbmdcbiAqIGxlbmd0aCAtIHRoZSBsZW5ndGggdG8gdHJpbSB0aGUgc3RyaW5nIHRvXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiB0cmltVGV4dChzdHJpbmc6IHN0cmluZywgbGVuZ3RoOiBudW1iZXIgPSBERUZBVUxUX01BWF9MRU5HVEgpOiBzdHJpbmcge1xuICByZXR1cm4gYCR7c3RyaW5nLnN1YnN0cmluZygwLCBsZW5ndGgpfS4uLmA7XG59XG4iXSwidmVyc2lvbiI6M30=

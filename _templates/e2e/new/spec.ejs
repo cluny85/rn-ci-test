@@ -1,0 +1,16 @@
+---
+to: e2e/<%= h.inflection.camelize(name) %>.spec.ts
+---
+import { device, expect, element, by } from 'detox';
+
+describe('<%= h.inflection.titleize(name) %>', () => {
+  beforeEach(async () => {
+    await device.reloadReactNative();
+  });
+
+  describe('on load', () => {
+    it('shows the expected text', async () => {
+      await expect(element(by.id('what'))).toExist();
+    });
+  });
+});

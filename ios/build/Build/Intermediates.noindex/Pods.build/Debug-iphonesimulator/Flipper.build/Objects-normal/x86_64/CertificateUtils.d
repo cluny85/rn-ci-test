@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Flipper/xplat/Flipper/CertificateUtils.cpp \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Target\ Support\ Files/Flipper/Flipper-prefix.pch \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Flipper/xplat/Flipper/CertificateUtils.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/pem.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/e_os2.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/opensslconf.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/opensslconf-x86_64.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/bio.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/crypto.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/stack.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/safestack.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/opensslv.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/ossl_typ.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/symhacks.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/evp.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/objects.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/obj_mac.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/asn1.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/bn.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/x509.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/buffer.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/ec.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/ecdsa.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/ecdh.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/rsa.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/dsa.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/dh.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/sha.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/x509_vfy.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/lhash.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/pkcs7.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/OpenSSL-Universal/openssl/pem2.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/Flipper-Folly/folly/portability/Fcntl.h \
+  /Users/oscar/Documents/bobio/rn/ios/Pods/Headers/Public/Flipper-Folly/folly/portability/SysStat.h

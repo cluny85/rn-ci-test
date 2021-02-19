@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.002276">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: android_appicon" time="0.708336">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: android_appicon" time="0.69741">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

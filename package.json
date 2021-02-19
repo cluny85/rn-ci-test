@@ -1,0 +1,116 @@
+{
+  "name": "hello-world",
+  "version": "0.0.1",
+  "description": "a React Native app bootstrapped with the Echobind template",
+  "private": true,
+  "scripts": {
+    "clean": "detox clean-framework-cache && detox build-framework-cache",
+    "start": "react-native start --reset-cache",
+    "test": "jest",
+    "test:ci": "jest",
+    "test:watch": "jest --changedSince=master --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "g:component": "hygen component new --name",
+    "g:screen": "hygen screen new --name",
+    "g:util": "hygen util new --name",
+    "g:e2e": "hygen e2e new --name",
+    "ios": "react-native run-ios --simulator='iPhone 11'",
+    "bundle:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    "preandroid": "adb reverse tcp:3030 tcp:3030 && adb reverse tcp:9090 tcp:9090",
+    "android": "react-native run-android",
+    "android:clean": "cd android && ./gradlew clean && cd ..",
+    "simulators": "xcrun simctl list",
+    "emulators": "emulator -list-avds",
+    "emulator:start": "emulator -avd",
+    "e2e:ios-debug": "detox build -c ios.sim.debug && detox test -c ios.sim.debug --cleanup",
+    "e2e:ios": "detox build -c ios.sim.release && detox test -c ios.sim.release --cleanup",
+    "e2e:android-debug": "detox build -c android.emu.debug && detox test -c android.emu.debug -l trace --cleanup",
+    "e2e:android": "detox build -c android.emu.release && detox test -c android.emu.release -l trace --cleanup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/core": "^10.0.6",
+    "@emotion/native": "^10.0.6",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.6.1",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
+    "emotion-theming": "^10.0.19",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-bootsplash": "^3.1.2",
+    "react-native-elements": "^1.2.7",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-native-safe-area-view": "^1.0.0",
+    "react-native-screens": "^2.9.0",
+    "react-native-vector-icons": "6.6.0",
+    "styled-system": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1",
+    "@storybook/addon-ondevice-backgrounds": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react-native": "^5.3.0-rc.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.7",
+    "@types/react": "^16.9.0",
+    "@types/react-native": "^0.60.15",
+    "babel-jest": "^25.1.0",
+    "detox": "^17.14.1",
+    "enquirer": "^2.3.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-echobind": "^0.2.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^1.2.1",
+    "hygen": "^2.0.4",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.0-beta.3",
+    "prettier": "^1.19.1",
+    "react-native-flipper": "^0.73.0",
+    "solidarity": "^2.3.1",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2",
+    "typescript-styled-plugin": "^0.13.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": {
+          "isolatedModules": false
+        }
+      }
+    },
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "e2e",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "yarn lint --fix",
+      "git add"
+    ]
+  }
+}

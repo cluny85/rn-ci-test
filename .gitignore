@@ -1,0 +1,9 @@
+node_modules
+.expo/*
+.tmp
+.vscode
+npm-debug.*
+
+yarn\.lock
+lint
+coverage
