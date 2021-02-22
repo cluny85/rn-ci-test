@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: macos-latest
     timeout-minutes: 25
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     steps:
       - name: Checkout
