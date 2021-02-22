@@ -22,10 +22,12 @@
     "simulators": "xcrun simctl list",
     "emulators": "emulator -list-avds",
     "emulator:start": "emulator -avd",
-    "e2e:ios-debug": "detox build -c ios.sim.debug && detox test -c ios.sim.debug --cleanup",
+    "e2e:ios-debug": "detox build -c ios.sim.debug && detox test -c ios.sim.debug --cleanup  --debug-synchronization 500",
     "e2e:ios": "detox build -c ios.sim.release && detox test -c ios.sim.release --cleanup --debug-synchronization 200",
     "e2e:android-debug": "detox build -c android.emu.debug && detox test -c android.emu.debug -l trace --cleanup --debug-synchronization 500",
-    "e2e:android": "detox build -c android.emu.release && detox test -c android.emu.release -l trace --cleanup"
+    "e2e:android": "detox build -c android.emu.release && detox test -c android.emu.release -l trace --cleanup",
+    "e2e:android-build": "detox build -c android.emu.debug",
+    "e2e:android-start-debug": "detox test -c android.emu.debug -l trace --cleanup --debug-synchronization 500"
   },
   "keywords": [],
   "author": "",

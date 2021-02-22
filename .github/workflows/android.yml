@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: macos-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -33,7 +33,7 @@ jobs:
 
       - name: Build for detox
         run: |
-          yarn build-detox-android
+          yarn e2e:android-build
       - name: Android Emulator
         timeout-minutes: 10
         continue-on-error: true
@@ -44,4 +44,4 @@ jobs:
           $ANDROID_HOME/platform-tools/adb devices
           echo "Emulator started"
       - name: Android Detox
-        run: yarn start & yarn test-detox-android
+        run: yarn e2e:android-start-debug
