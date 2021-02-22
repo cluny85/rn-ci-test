@@ -8,3 +8,9 @@ npm-debug.*
 yarn\.lock
 lint
 coverage
+
+ios/build/*
+android/app/build/*
+android/.gradle/*
+
+.DS_Store
