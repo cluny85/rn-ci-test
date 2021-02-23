@@ -14,3 +14,5 @@ android/app/build/*
 android/.gradle/*
 
 .DS_Store
+
+android/app/google-private-key.json

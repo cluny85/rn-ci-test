@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   build:
+    # Skiping while test fastlane
+    if: github.event.pull_request.merged == true
     runs-on: macos-latest
     timeout-minutes: 25
     env:

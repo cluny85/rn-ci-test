@@ -6,21 +6,21 @@ fastlane_version '2.105.2'
 #   git_pull
 # end
 
-platform :ios do
-  # iOS Lanes
-  desc 'Fetch certificates and provisioning profiles'
-  lane :certificates do
-    match(app_identifier: 'com.rn.mobile', type: 'development', readonly: true)
-  end
+# platform :ios do
+#   # iOS Lanes
+#   desc 'Fetch certificates and provisioning profiles'
+#   lane :certificates do
+#     match(app_identifier: 'com.rn.mobile', type: 'development', readonly: true)
+#   end
 
-  desc 'generate iOS appiconset from master image'
-  lane :icon do
-    appicon(
-      appicon_devices: [:iphone, :ios_marketing],
-      appicon_path: "ios/rn/Images.xcassets"
-    )
-  end
-end
+#   desc 'generate iOS appiconset from master image'
+#   lane :icon do
+#     appicon(
+#       appicon_devices: [:iphone, :ios_marketing],
+#       appicon_path: "ios/rn/Images.xcassets"
+#     )
+#   end
+# end
 
 platform :android do
   desc 'generate Android launch icon from master image'
@@ -36,6 +36,22 @@ platform :android do
       appicon_icon_types: [:notification],
       appicon_path: 'android/app/src/main/res/mipmap',
       appicon_filename: 'ic_notification'
+    )
+  end
+  lane :build_and_release_to_play_store do |options|
+    # Bundle the app
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      project_dir: "android/"
+    )
+
+    # Upload to Play Store's Internal Testing
+    upload_to_play_store(
+      package_name: 'com.rn',
+      track: "internal",
+      json_key: "./android/app/google-private-key.json",
+      aab: "./android/app/build/outputs/bundle/release/app.aab"
     )
   end
 end

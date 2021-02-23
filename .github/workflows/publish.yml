@@ -1,0 +1,58 @@
+name: Publish React Native App to App Store and Play Store
+
+on:
+  release:
+    type: [published]
+
+jobs:
+  # release-ios:
+  #   name: Build and release iOS app
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: '10.x'
+  #     - uses: actions/setup-ruby@v1
+  #       with:
+  #         ruby-version: '2.x'
+  #     - name: Install Fastlane
+  #       run: bundle install
+  #     - name: Install packages
+  #       run: yarn install
+
+  release-android:
+    name: Build and release Android app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.x"
+      - name: Setup react-native kernel and increase watchers
+        run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+      - name: Install Fastlane
+        run: bundle install
+      - name: Install packages
+        run: yarn install
+
+      - name: Jetifier AndroidX transition
+        run: npx jetify
+      - name: Decrypt keystore and Google Credential
+        run: sh ./scripts/android-gpg-decrypt.sh
+        env:
+          ENCRYPT_PASSWORD: ${{ secrets.GPG_ENCRYPT_PASSWORD }}
+      - name: Dump secrets to .env
+        run: env > .env
+        env:
+          REQUIRED_ENV: ${{ secrets.REQUIRED_ENV }}
+      - name: Bundle and Upload to PlayStore
+        run: bundle exec fastlane build_and_release_to_play_store versionName:${{ github.event.release.tag_name }}
+        env:
+          VERSION_NAME: ${{ github.event.release.tag_name }}
+          GITHUB_RUN_NUMBER: ${{ secrets.GITHUB_RUN_NUMBER }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

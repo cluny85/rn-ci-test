@@ -138,8 +138,8 @@ android {
         applicationId "com.rn"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode System.env.GITHUB_RUN_NUMBER.toInteger() ?: 1
+        versionName System.getenv("VERSION_NAME") ?: "1.0"
         testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
