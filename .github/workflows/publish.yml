@@ -1,11 +1,11 @@
 name: Publish React Native App to App Store and Play Store
 
 on:
-  push:
-    branches:
-      - master
-  # release:
-  #   type: [published]
+  # push:
+  #   branches:
+  #     - master
+  release:
+    type: [published]
 
 jobs:
   # release-ios:
