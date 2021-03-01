@@ -22,3 +22,4 @@ android/.gradle/*
 .DS_Store
 
 android/app/google-private-key.json
+android/app/debug.keystore

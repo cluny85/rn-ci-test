@@ -1,6 +1,6 @@
 # React Native Boilerplate
 
-One Paragraph of project description goes here
+This is a project customized from template: [react-native-template](https://github.com/echobind/react-native-template)
 
 ## Table of Contents
 
