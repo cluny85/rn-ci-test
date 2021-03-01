@@ -1,4 +1,4 @@
-# React Native Project Title
+# React Native Boilerplate
 
 One Paragraph of project description goes here
 
@@ -19,6 +19,25 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 In order to get this project running locally, please make sure you ahve followed the "React Native CLI Quickstart" in the [React Native "Getting Started"](https://facebook.github.io/react-native/docs/getting-started) guide.
+
+Before you start, you need to have this installed:
+
+- xcode-utils
+Open Xcode > preferences > Locations > Command line tools => select xcode version elegible
+
+- Cocoapods
+Open cmd and:
+```
+brew install cocoapods
+```
+
+- applesimutils
+Open cmd and:
+```
+brew tap wix/brew
+brew install applesimutils
+```
+
 
 ### Installing
 

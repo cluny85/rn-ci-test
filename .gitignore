@@ -1,15 +1,21 @@
-node_modules/**/*
+node_modules/
 .expo/*
 .tmp
 .vscode
-.jest/**/*
+.jest/
 npm-debug.*
 
 yarn\.lock
 lint
 coverage
 
-ios/build/*
+ios/build/Build/
+ios/build/Index/
+ios/build/Logs/
+ios/build/ModuleCache.noindex/
+ios/build/SourcePackages/
+
+
 android/app/build/*
 android/.gradle/*
 

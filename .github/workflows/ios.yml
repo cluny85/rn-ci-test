@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     # Skiping while test fastlane
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     runs-on: macos-latest
     timeout-minutes: 30
 
@@ -30,7 +30,7 @@ jobs:
 
       - name: Rebuild detox
         if: steps.cache.outputs.cache-hit == 'true'
-        run: yarn detox clean-framework-cache && yarn detox build-framework-cache
+        run: yarn clean
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
