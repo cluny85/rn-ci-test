@@ -39,12 +39,12 @@ jobs:
         run: |
           yarn install --frozen-lockfile
       
-      - name: Start react-native
-        run: yarn start
+      # - name: Start react-native
+      #   run: yarn start
 
       - name: Build for detox
         run: |
-          yarn e2e:android-build
+          yarn e2e:android-build-2
       - name: Android Emulator
         timeout-minutes: 10
         continue-on-error: true
