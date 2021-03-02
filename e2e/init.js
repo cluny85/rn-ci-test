@@ -20,6 +20,7 @@ beforeAll(async () => {
     /** this is where you can set what permissions might be needed */
     // permissions: { notifications: 'YES', camera: 'YES' },
     newInstance: true,
+    launchArgs: { 'DTXEnableVerboseSyncSystem': 'YES', 'DTXEnableVerboseSyncResources': 'YES' },
   });
 });
 

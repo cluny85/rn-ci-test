@@ -16,8 +16,8 @@ ios/build/ModuleCache.noindex/
 ios/build/SourcePackages/
 
 
-android/app/build/*
-android/.gradle/*
+android/app/build/
+android/.gradle/
 
 .DS_Store
 

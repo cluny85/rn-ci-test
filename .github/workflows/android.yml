@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     # Skiping while test fastlane
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     runs-on: macos-latest
     timeout-minutes: 25
     env:
@@ -26,6 +26,10 @@ jobs:
           java-version: "openjdk8"
           architecture: "x64"
 
+      - name: Rebuild detox
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: yarn clean
+
       - name: Download Android Emulator Image
         run: |
           echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-29;google_apis;x86"
@@ -34,6 +38,9 @@ jobs:
       - name: Install node_modules
         run: |
           yarn install --frozen-lockfile
+      
+      - name: Start react-native
+        run: yarn start
 
       - name: Build for detox
         run: |
