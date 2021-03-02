@@ -28,7 +28,7 @@
     "e2e:android": "detox build -c android.emu.release && detox test -c android.emu.release -l trace --cleanup",
     "e2e:android-build": "detox build -c android.emu.debug",
     "e2e:android-build-2": "react-native start --reset-cache & detox build -c android.emu.debug",
-    "e2e:android-start-debug": "detox test -c android.emu.debug -l trace --cleanup --debug-synchronization 30000"
+    "e2e:android-start-debug": "detox test -c android.emu.debug -l trace --cleanup --debug-synchronization 60000"
   },
   "keywords": [],
   "author": "",
