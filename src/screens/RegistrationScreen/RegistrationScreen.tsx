@@ -17,6 +17,7 @@ export const RegistrationScreen: FC<NavigationScreenProps> = ({ navigation }) =>
   const createClick = () => {
     navigation.navigate('Intro');
   };
+
   return (
     <BackgroundImage source={bgImage} resizeMode="cover">
       <StatusBar

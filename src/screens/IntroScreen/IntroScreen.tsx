@@ -34,6 +34,14 @@ export const IntroScreen: FC<NavigationScreenProps> = ({ navigation }) => {
             onPress={() => navigation.navigate('Login')}
             borderRadius={5}
           />
+          <Button
+            testID="drag-button"
+            label="Drag & drop test"
+            backgroundColor={colors.black}
+            color={colors.white}
+            onPress={() => navigation.navigate('Drag')}
+            borderRadius={5}
+          />
         </Container>
       </Screen>
     </BackgroundImage>

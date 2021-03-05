@@ -12,9 +12,11 @@ import {
 
 import { colors } from '../../styles';
 
-interface TextProps {}
+// interface TextProps {}
 
-type ComponentProps = TextProps & ColorProps & SpaceProps & TextStyleProps & TypographyProps;
+type ComponentProps =
+  // TextProps &
+  ColorProps & SpaceProps & TextStyleProps & TypographyProps;
 
 /**
  * This is our primitive Text component with styled-system props applied

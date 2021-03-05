@@ -44,7 +44,7 @@ export const Registration: FC<ComponentProps> = ({ createPress, goBack, children
       {...props}
     >
       <Container flex={0.1} fullWidth>
-        <Touchable onPress={() => goBack()} fullWidth alignItems="flex-start">
+        <Touchable onPress={(): any => goBack()} fullWidth alignItems="flex-start">
           <Icon name="arrow-back" />
         </Touchable>
       </Container>
@@ -84,7 +84,7 @@ export const Registration: FC<ComponentProps> = ({ createPress, goBack, children
           backgroundColor={colors.white}
           borderRadius={5}
           borderColor={colors.orange}
-          onPress={() => {
+          onPress={(): any => {
             createPress();
           }}
         />

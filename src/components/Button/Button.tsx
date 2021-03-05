@@ -17,9 +17,9 @@ import { AccessbilityRole } from '../../types/AccessibilityRole';
 
 interface ButtonProps {
   /**
-  * Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
-  * label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
-  */
+   * Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
+   * label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
+   */
   accessibilityLabel: string;
   /** Accessibility Role tells a person using either VoiceOver on iOS or TalkBack on Android the type of element that is focused on.  */
   accessbilityRole?: AccessbilityRole;

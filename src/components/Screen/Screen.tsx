@@ -5,8 +5,7 @@ import { color, space, FlexProps, SpaceProps } from 'styled-system';
 
 import { Container } from '../Container';
 
-import { theme } from '../../styles';
-import { colors } from '../../styles';
+import { theme, colors } from '../../styles';
 
 const VerticallyPaddedView = styled.View`
   flex: 1;
@@ -23,7 +22,7 @@ interface ScreenProps {
   /** The content to render within the screen */
   children?: ReactNode;
   /** Whether to force the topInset. Use to prevent screen jank on tab screens */
-  forceTopInset?: Boolean;
+  forceTopInset?: boolean;
 }
 
 type ComponentProps = ScreenProps & FlexProps & SpaceProps;

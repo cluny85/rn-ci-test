@@ -236,7 +236,7 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-flipper (0.73.0):
+  - react-native-flipper (0.78.0):
     - React-Core
   - react-native-safe-area-context (3.1.9):
     - React-Core
@@ -304,7 +304,7 @@ PODS:
     - React-Core
   - RNCMaskedView (0.1.10):
     - React
-  - RNGestureHandler (1.10.0):
+  - RNGestureHandler (1.10.3):
     - React-Core
   - RNReanimated (1.13.2):
     - React-Core
@@ -485,7 +485,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-flipper: 8b9490879651c7a33d77cf2ac802120573773f8d
+  react-native-flipper: d66c4b450aba1b981786c0b3b98c995de5ea8591
   react-native-safe-area-context: b6e0e284002381d2ff29fa4fff42b4d8282e3c94
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
   React-RCTAnimation: 9a883bbe1e9d2e158d4fb53765ed64c8dc2200c6
@@ -499,7 +499,7 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   RNBootSplash: 43868f415d2a2c7b5365ebc8dd0f93abbce0f00c
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNGestureHandler: 03f587ba19a7e2d9fe48fb9aa6e33ace5fd07dd5
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: b6c9607e6fe47c1b6e2f1910d2acd46dd7ecea3a
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
@@ -508,4 +508,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9eed1584e628ad8a9981a484b1af8259435a1f0a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.8.4

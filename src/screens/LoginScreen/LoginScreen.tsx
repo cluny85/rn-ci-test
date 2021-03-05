@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Alert, ImageBackground, StatusBar, StyleSheet } from 'react-native';
-import { NavigationScreenProps } from 'react-navigation';
+// import { NavigationScreenProps } from 'react-navigation';
+import { StackScreenProps } from '@react-navigation/stack';
 import styled from '@emotion/native';
 
 import { Login } from '../../components/Login';
@@ -11,7 +12,16 @@ import { colors } from '../../styles';
 const BackgroundImage = styled(ImageBackground)`
   ${StyleSheet.absoluteFillObject};
 `;
-export const LoginScreen: FC<NavigationScreenProps> = ({ navigation }) => {
+
+type RootStackParamList = {
+  Intro: undefined;
+  Registration: undefined;
+  Login: undefined;
+};
+
+type Props = StackScreenProps<RootStackParamList, 'Login'>;
+
+export const LoginScreen: FC<Props> = ({ navigation }) => {
   const loginClick = (): void => {
     navigation.navigate('Intro');
   };
@@ -33,7 +43,6 @@ export const LoginScreen: FC<NavigationScreenProps> = ({ navigation }) => {
         barStyle="light-content"
       />
       <Screen testID="loginScreen" backgroundColor={colors.transparent} paddingTop={60} margin={20}>
-
         <Login
           loginPress={loginClick}
           registrationPress={registrationClick}

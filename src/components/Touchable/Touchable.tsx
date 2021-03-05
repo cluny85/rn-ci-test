@@ -32,19 +32,19 @@ export const Touchable = styled.TouchableOpacity<ComponentProps>`
   ${layout};
   ${flexbox};
 
-  ${props =>
+  ${(props): string =>
     props.fill &&
     `
       flex: 1;
     `}
 
-  ${props =>
+  ${(props): string =>
     props.fullWidth &&
     `
       width: 100%;
     `}
 
-  ${props =>
+  ${(props): string =>
     props.centerContent &&
     `
       justifyContent: center;

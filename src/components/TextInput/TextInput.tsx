@@ -28,10 +28,10 @@ interface TextInputProps extends TextInputBaseProps {
   //** An option icon to be displayed to the left of the input box */
   icon?: Icon;
   /**
-  * Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
-  * label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
-  */
-   accessibilityLabel?: string;
+   * Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
+   * label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
+   */
+  accessibilityLabel?: string;
 }
 
 type ComponentProps = TextInputProps &

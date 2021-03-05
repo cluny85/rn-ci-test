@@ -3,6 +3,4 @@ import React from 'react';
 
 import { Registration } from './Registration';
 
-storiesOf('components/Registration', module).add('Default', () => (
-  <Registration />
-));
+storiesOf('components/Registration', module).add('Default', () => <Registration />);

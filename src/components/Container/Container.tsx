@@ -38,23 +38,23 @@ export const Container = styled.View<ComponentProps>`
   ${borders};
   ${layout};
   ${flexbox};
-  ${props =>
+  ${(props): string =>
     props.fill &&
     `
       flex: 1;
     `}
-  ${props =>
+  ${(props): string =>
     props.fullWidth &&
     `
       width: 100%;
     `}
-  ${props =>
+  ${(props): string =>
     props.centerContent &&
     `
       justifyContent: center;
       alignItems: center;
     `}
-  ${props =>
+  ${(props): string =>
     props.screenMargins &&
     `
       paddingHorizontal: ${margins.screenMargin};

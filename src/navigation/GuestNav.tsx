@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { IntroScreen } from '../screens/IntroScreen';
 import { LoginScreen } from '../screens/LoginScreen';
 import { RegistrationScreen } from '../screens/RegistrationScreen';
+import { DragScreen } from '../screens/DragScreen';
 import { OnboardingNav } from './OnboardingNav';
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ export const GuestNav = (): ReactElement => {
       <Stack.Screen name="Onboard" component={OnboardingNav} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Registration" component={RegistrationScreen} />
+      <Stack.Screen name="Drag" component={DragScreen} />
     </Stack.Navigator>
   );
 };
