@@ -18,8 +18,11 @@ describe('Loginscreen', () => {
     it('Navigate to after login click', async () => {
       await element(by.id('email-input')).typeText('oscar@bob.io');
       await element(by.id('password-input')).typeText('12345');
-      await element(by.id('loginButton')).tap();
-      await expect(element(by.id('introScreen'))).toBeVisible();
+
+      if (device.getPlatform() === 'ios') {
+        await element(by.id('loginButton')).tap();
+        await expect(element(by.id('introScreen'))).toBeVisible();
+      }
     });
   });
 });
