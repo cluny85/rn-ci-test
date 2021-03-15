@@ -1,3 +1,4 @@
+// DOC - device: https://github.com/wix/Detox/blob/master/docs/APIRef.DeviceObjectAPI.md
 import { device, expect, element, by } from 'detox';
 
 describe('Loginscreen', () => {
